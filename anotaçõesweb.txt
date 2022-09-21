@@ -1,0 +1,7 @@
+typescript 
+javascript
+spa - single page aplication
+ajax
+jquery
+data biding
+view

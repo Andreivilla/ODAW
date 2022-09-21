@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+</head>
+<body>
+    <script>
+        function nova_janela(url)
+        {
+            window.open(url,'teste','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,menubar=no,width=550,height=350')
+        }	
+    </script> 
+    <h1>Exercício 2</h1>
+    <h2>Alguns desenhos feitos com canvas</h2>
+    <p>Utilizando o tutorial disponivel em 
+        <a href="http://blog.triadworks.com.br/html5-desenhando-graficos-no-browser-com-canvas">triadworks.com.br</a>
+    </p>    
+    <li>
+        <ol>
+            <a href="javascript:nova_janela('quadradorect.html')">
+                Quadrado vazio feito com rect
+            </a>
+        </ol>
+        <ol>
+            <a href="javascript:nova_janela('quadradopreenchido.html')">
+                Quadrado prenchido e colorido
+            </a>
+        </ol>
+        <ol>
+            <a href="javascript:nova_janela('duasesferas.html')">
+                Duas esferas
+            </a>
+        </ol>
+    </li>
+    <h2>Audio e video</h2>
+    <p>Utilizando o tutorial disponivel em 
+        <a href="https://www.devmedia.com.br/html5-video-tutorial/28790">devmedia</a>
+    </p>
+    <li>
+        <ol>
+            <video autoplay width="320" height="240" src="rick.mp4" controls="controls">
+                <source type="video/mp4"></source>
+            </video>
+        </ol>
+        <ol>
+            <audio autoplay="autoplay" controls="controls">
+                <source src="rick.mp3" type="audio/mp3" />
+            </audio>
+        </ol>
+    </li>
+</body>
+</html>

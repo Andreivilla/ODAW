@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esferas</title>
+</head>
+<body>
+    <h1>Esferas</h1>
+
+    <canvas id="meuCanvas"></canvas>
+    <script>
+        var canvas = document.getElementById('meuCanvas');
+        var pincel = canvas.getContext('2d');
+
+        // circulo 1
+        pincel.arc(100, 80, 50, 0, Math.PI * 2 );
+        pincel.stroke();
+        // circulo 2
+        pincel.arc(30, 30, 25, 0, Math.PI * 2);
+    pincel.fill();
+    </script>
+    
+</body>
+</html>
