@@ -1,0 +1,17 @@
+body {
+    background-color: #5F00B8;
+}
+h2 {
+    color: white;
+}
+table , th, td {
+    border: 1px solid #3D0075;
+    color: white;
+    width: 100%;
+}
+th {
+    height: 70px;
+}
+.listaExercios {
+    color: white;
+}
