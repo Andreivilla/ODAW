@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo de sorte</title>
+    <style>
+        h1{
+            text-align: center;
+            vertical-align: middle;
+        }
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+        td {
+            width: 100px;
+            height: 200px;
+            
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        img {
+            width: 100px;
+            height: 200px;            
+        }
+
+    </style>
+</head>
+<body style="background-color: darkgray;">
+    <h1>Encontre o As</h1>
+    <table>
+        <tr>
+            <td>
+                <button onclick="jogada(this.value)" value="1">
+                    <img id="carta1" src="carta.png" alt="">
+                </button>
+            </td>
+            <td>
+                <button onclick="jogada(this.value)" value="2">
+                    <img id="carta2" src="carta.png" alt="">
+                </button>
+            </td>
+            <td>
+                <button onclick="jogada(this.value)" value="3">
+                    <img id="carta3" src="carta.png" alt="">
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="jogada(this.value)" value="4">
+                    <img id="carta4" src="carta.png" alt="">
+                </button>
+            </td>
+            <td>
+                <button onclick="jogada(this.value)" value="5">
+                    <img id="carta5" src="carta.png" alt="">
+                </button>
+            </td>
+            <td>
+                <button onclick="jogada(this.value)" value="6">
+                    <img id="carta6" src="carta.png" alt="">
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="jogada(this.value)" value="7">
+                    <img id="carta7" src="carta.png" alt="">
+                </button>
+            </td>
+            <td>
+                <button onclick="jogada(this.value)" value="8">
+                    <img id="carta8" src="carta.png" alt="">
+                </button>
+            </td>
+            <td>
+                <button onclick="jogada(this.value)" value="9">
+                    <img id="carta9" src="carta.png" alt="">
+                </button>
+            </td>
+        </tr>
+    </table>
+    
+    <script>
+        function jogada(carta){
+            var carta_vencedora = Math.floor(Math.random() * 9) + 1;
+            var carta_nome = "carta" + carta
+            var imagem = document.getElementById(carta_nome)
+
+            if (carta == carta_vencedora){
+                imagem.src = "as.png"
+                alert("você ganhou")
+            }else{
+                var carta_nome = "carta_perdedora.png"
+                imagem.src = carta_nome
+                alert("você perdeu")
+            }
+
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princcipal</title>
+</head>
+<body style="background-color: darkgray;">
+    <h1>Exercício 7</h1>
+    <h2>1-Faça um formulário com 3 campos de texto, alterar para letras maiúsculas e minúsculas 
+        através de checkbox. Ver exemplo 6.
+    </h2>
+
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <input type="checkbox" id="chk_nome" name="chk_nome" onclick="converteParaMaiusculo('nome')"> maiúsculas
+        <input type="checkbox" id="chk_nome" name="chk_nome" onclick="converteParaMinusculo('nome')"> minúsculas<br><br> 
+      
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email">
+        <input type="checkbox" id="chk_email" name="chk_email" onclick="converteParaMaiusculo('email')"> maiúsculas
+        <input type="checkbox" id="chk_nome" name="chk_nome" onclick="converteParaMinusculo('email')"> minúsculas<br><br>
+        
+        <label for="texto">Texto:</label>
+        <textarea id="texto" name="texto"></textarea>
+        <input type="checkbox" id="chk_texto" name="chk_texto" onclick="converteParaMaiusculo('texto')"> maiúsculas
+        <input type="checkbox" id="chk_nome" name="chk_nome" onclick="converteParaMinusculo('texto')"> minúsculas<br><br>
+      
+        <button type="submit">Enviar</button>
+      </form>
+            
+      <script>
+        function converteParaMaiusculo(campo) {
+            var input = document.getElementById(campo);
+            input.value = input.value.toUpperCase();
+        }
+        function converteParaMinusculo(campo) {
+            var input = document.getElementById(campo);
+            input.value = input.value.toLowerCase();
+        }
+      </script>
+
+      <h2>2- Crie um formulário com 4 campos, sendo todos obrigatórios. Na submissão, 
+        verificar se os dados obrigatórios foram informados, mostre o erro ocorrido ou 'Sucesso' 
+        através de janela alert. Ver exemplo 10.
+      </h2>
+
+        <form>
+            <label for="nome2">Nome:</label>
+            <input type="text" id="nome2" name="nome2" required><br><br>
+          
+            <label for="email2">E-mail:</label>
+            <input type="email" id="email2" name="email2" required><br><br>
+          
+            <label for="senha0">Telefone:</label>
+            <input type="password" id="senha0" name="senha0" required><br><br>
+          
+            <label for="senha1">Telefone:</label>
+            <input type="password" id="senha1" name="senha1" required><br><br>
+
+            <button type="submit">cadastrar</button>
+
+        </form>
+
+        <h2>3- Ler o nome do usuário (via prompt) e imprimir a mensagem:
+            "Bom dia, boa tarde ou boa noite (de acordo com o horário atual), 
+            NOME INFORMADO, hoje é: dia da semana, dia/mês/ano."
+        </h2>
+        <p>Ex. Boa Tarde, Maria, hoje é terça-feira, 04/04/2023.</p>
+        
+        <button type="button" onclick="leNomePrompt()">Clique para começar</button>
+
+        <script>
+            function diaSemana(data){
+                var diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+                return diasSemana[data.getDay()]
+            }
+
+            function leNomePrompt() {
+                var nome = prompt("Digite seu nome:");
+                var dataAtual = new Date();
+                var hora = dataAtual.getHours()
+                if(hora >= 5 && hora <= 12)
+                    alert("Bom dia, " + nome + ", hoje é " + diaSemana(dataAtual) + ", " + dataAtual.getDate() + "/" + dataAtual.getMonth() + "/" + dataAtual.getFullYear())
+                else if(hora <= 19)
+                    alert("Boa tarde, " + nome + ", hoje é " + diaSemana(dataAtual) + ", " + dataAtual.getDate() + "/" + dataAtual.getMonth() + "/" + dataAtual.getFullYear())
+                else 
+                    alert("Boa noite, " + nome + ", hoje é " + diaSemana(dataAtual) + ", " + dataAtual.getDate() + "/" + dataAtual.getMonth() + "/" + dataAtual.getFullYear())
+            }
+        </script>
+
+        <h2>
+            4- Crie um exemplo livre de uso de Javascript, baseado no material estudado.
+        </h2>
+        <button><a href="ex4.html">Clique da sorte</a></button>
+
+</body>
+</html>
